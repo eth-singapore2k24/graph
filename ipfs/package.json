@@ -1,0 +1,18 @@
+{
+  "name": "ipfs",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ ipfs",
+    "create-local": "graph create --node http://localhost:8020/ ipfs",
+    "remove-local": "graph remove --node http://localhost:8020/ ipfs",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 ipfs",
+    "test": "graph test"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.81.0",
+    "@graphprotocol/graph-ts": "0.32.0"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
+}

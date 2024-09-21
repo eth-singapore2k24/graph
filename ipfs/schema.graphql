@@ -1,0 +1,7 @@
+type newCID @entity(immutable: true) {
+  id: Bytes!
+  _cid: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
