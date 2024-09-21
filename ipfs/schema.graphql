@@ -1,7 +1,19 @@
-type newCID @entity(immutable: true) {
-  id: Bytes!
-  _cid: String! # string
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
+type NewCID @entity(immutable: true) {
+	id: Bytes!
+	_cid: String!
+	blockNumber: BigInt!
+	blockTimestamp: BigInt!
+	transactionHash: Bytes!
+}
+
+type UserInterest @entity {
+	id: ID!
+	interests: [String!]!
+	lastUpdateTimestamp: String!
+}
+
+type GlobalInterest @entity {
+	id: ID!
+	count: Int!
+	users: [String!]!
 }

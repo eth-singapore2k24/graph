@@ -1,6 +1,4 @@
-specVersion: 1.0.0
-indexerHints:
-  prune: auto
+specVersion: 0.0.5
 schema:
   file: ./schema.graphql
 dataSources:
@@ -32,7 +30,8 @@ templates:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - PostContent
+        - UserInterest
+        - GlobalInterest
       abis:
         - name: Contract
           file: ./abis/Contract.json
