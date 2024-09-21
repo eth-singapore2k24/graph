@@ -24,3 +24,17 @@ dataSources:
         - event: newCID(string)
           handler: handlenewCID
       file: ./src/contract.ts
+templates:
+  - kind: file/ipfs
+    name: IpfsContent
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - PostContent
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      handler: handlePostContent
+      file: ./src/contract.ts
